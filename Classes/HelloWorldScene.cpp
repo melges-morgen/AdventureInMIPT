@@ -20,7 +20,6 @@ Scene* HelloWorld::createScene()
 // on "init" you need to initialize your instance
 bool HelloWorld::init()
 {
-    FileUtils::getInstance()->addSearchPath("Resources\\");
     //////////////////////////////
     // 1. super init first
     if ( !Layer::init() )
@@ -55,7 +54,7 @@ bool HelloWorld::init()
     // add a label shows "Hello World"
     // create and initialize a label
     
-    auto label = Label::createWithTTF("Привет, Физтех", "fonts\\arial.ttf", 24);
+    auto label = Label::createWithTTF("Привет, Физтех", "fonts/arial.ttf", 24);
     
     // position the label on the center of the screen
     label->setPosition(Vec2(origin.x + visibleSize.width/2,

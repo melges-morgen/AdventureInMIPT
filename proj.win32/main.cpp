@@ -14,5 +14,6 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 
     // create the application instance
     AppDelegate app;
+    FileUtils::getInstance()->addSearchPath("Resources\\");
     return Application::getInstance()->run();
 }
