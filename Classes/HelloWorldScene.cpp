@@ -20,7 +20,6 @@ Scene* HelloWorld::createScene()
 // on "init" you need to initialize your instance
 bool HelloWorld::init()
 {
-    FileUtils::getInstance()->addSearchPath("Resources\\");
     //////////////////////////////
     // 1. super init first
     if ( !Layer::init() )
