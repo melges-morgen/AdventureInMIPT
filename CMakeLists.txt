@@ -127,15 +127,19 @@ if ( WIN32 )
 endif( WIN32 )
 
 set(GAME_SRC
-  Classes/AppDelegate.cpp
-  Classes/HelloWorldScene.cpp
+        Classes/AppDelegate.cpp
+        Classes/HelloWorldScene.cpp
+        Classes/GameSettings.cpp
+        Classes/exceptions/InitializationError.cpp
   ${PLATFORM_SPECIFIC_SRC}
 )
 
 set(GAME_HEADERS
-  Classes/AppDelegate.h
-  Classes/HelloWorldScene.h
-  ${PLATFORM_SPECIFIC_HEADERS}
+        ${PLATFORM_SPECIFIC_HEADERS}
+        Classes/AppDelegate.h
+        Classes/HelloWorldScene.h
+        Classes/GameSettings.h
+        Classes/exceptions/InitializationError.h
 )
 
 if(GAME_HEADERS)
