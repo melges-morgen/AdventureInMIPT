@@ -30,5 +30,6 @@ USING_NS_CC;
 int main(int argc, char *argv[])
 {
     AppDelegate app;
+    FileUtils::getInstance()->addSearchPath("Resources/");
     return Application::getInstance()->run();
 }
