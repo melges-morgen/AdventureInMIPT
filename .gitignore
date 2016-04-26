@@ -30,3 +30,6 @@
 # CLion
 .idea
 .idea/*
+
+#Ignore cocos2d library
+cocos2d
