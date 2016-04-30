@@ -10,6 +10,7 @@
 #include <2d/CCLayer.h>
 #include <base/CCDirector.h>
 #include <2d/CCMenu.h>
+#include <GameSettings.h>
 
 class GameMainMenuScene : cocos2d::Layer
 {
@@ -29,6 +30,7 @@ public:
 
 private:
     cocos2d::Director *director_;
+    GameSettings *gameSettings_;
     cocos2d::Menu *menu_;
 };
 
