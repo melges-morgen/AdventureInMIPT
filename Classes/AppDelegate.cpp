@@ -1,5 +1,7 @@
+#include <scenes/GameMainMenuScene.h>
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
+#include "GameSettings.h"
 
 USING_NS_CC;
 
@@ -37,10 +39,15 @@ static int register_all_packages()
 bool AppDelegate::applicationDidFinishLaunching() {
     // initialize director
     auto director = Director::getInstance();
+    auto settings = GameSettings::getInstance();
     auto glview = director->getOpenGLView();
     if(!glview) {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX)
-        glview = GLViewImpl::createWithRect("AdventureOnMIPT", Rect(0, 0, designResolutionSize.width, designResolutionSize.height));
+        if(settings->isFullScreen())
+            glview = GLViewImpl::createWithFullScreen("AdventureOnMIPT");
+        else
+            glview = GLViewImpl::createWithRect("AdventureOnMIPT",
+                                                Rect(0, 0, mediumResolutionSize.width, mediumResolutionSize.height));
 #else
         glview = GLViewImpl::create("AdventureOnMIPT");
 #endif
@@ -75,7 +82,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     register_all_packages();
 
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+    auto scene = GameMainMenuScene::createScene();
 
     // run
     director->runWithScene(scene);
