@@ -16,6 +16,10 @@ public:
         return userDefault_->getBoolForKey("fullScreen");
     }
 
+    inline void setFullScreen(bool &fullScreen) {
+        userDefault_->setBoolForKey("fullScreen", fullScreen);
+    }
+
 private:
     GameSettings();
     GameSettings(const GameSettings&);

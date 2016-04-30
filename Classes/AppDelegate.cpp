@@ -1,3 +1,4 @@
+#include <scenes/GameMainMenuScene.h>
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
 #include "GameSettings.h"
@@ -46,7 +47,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
             glview = GLViewImpl::createWithFullScreen("AdventureOnMIPT");
         else
             glview = GLViewImpl::createWithRect("AdventureOnMIPT",
-                                                Rect(0, 0, designResolutionSize.width, designResolutionSize.height));
+                                                Rect(0, 0, mediumResolutionSize.width, mediumResolutionSize.height));
 #else
         glview = GLViewImpl::create("AdventureOnMIPT");
 #endif
@@ -81,7 +82,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     register_all_packages();
 
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+    auto scene = GameMainMenuScene::createScene();
 
     // run
     director->runWithScene(scene);
