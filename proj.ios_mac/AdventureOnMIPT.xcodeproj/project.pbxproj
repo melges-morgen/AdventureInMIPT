@@ -26,13 +26,9 @@
 		5087E78B17EB975400C73F5D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5087E78A17EB975400C73F5D /* OpenGL.framework */; };
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
-<<<<<<< Updated upstream
-=======
 		86EB2A6A1CD7A5CF00571F2E /* GameMainMenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86EB2A681CD7A5CF00571F2E /* GameMainMenuScene.cpp */; settings = {ASSET_TAGS = (); }; };
 		86EB2A6D1CD7A5DD00571F2E /* GameSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86EB2A6B1CD7A5DD00571F2E /* GameSettings.cpp */; settings = {ASSET_TAGS = (); }; };
 		86EB2A701CD7A5EB00571F2E /* InitializationError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86EB2A6E1CD7A5EB00571F2E /* InitializationError.cpp */; settings = {ASSET_TAGS = (); }; };
-		86EB2A781CD7C6B600571F2E /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86EB2A761CD7C6B600571F2E /* GameObject.cpp */; settings = {ASSET_TAGS = (); }; };
->>>>>>> Stashed changes
 		CD069E901CCD8ADB0047BEFA /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD069E8F1CCD8ADB0047BEFA /* libcocos2d Mac.a */; };
 		ED545A7E1B68A1FA00C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7D1B68A1FA00C3958E /* libiconv.dylib */; };
 /* End PBXBuildFile section */
@@ -87,17 +83,12 @@
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-<<<<<<< Updated upstream
-=======
 		86EB2A681CD7A5CF00571F2E /* GameMainMenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameMainMenuScene.cpp; path = scenes/GameMainMenuScene.cpp; sourceTree = "<group>"; };
 		86EB2A691CD7A5CF00571F2E /* GameMainMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameMainMenuScene.h; path = scenes/GameMainMenuScene.h; sourceTree = "<group>"; };
 		86EB2A6B1CD7A5DD00571F2E /* GameSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameSettings.cpp; sourceTree = "<group>"; };
 		86EB2A6C1CD7A5DD00571F2E /* GameSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSettings.h; sourceTree = "<group>"; };
 		86EB2A6E1CD7A5EB00571F2E /* InitializationError.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InitializationError.cpp; path = exceptions/InitializationError.cpp; sourceTree = "<group>"; };
 		86EB2A6F1CD7A5EB00571F2E /* InitializationError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitializationError.h; path = exceptions/InitializationError.h; sourceTree = "<group>"; };
-		86EB2A761CD7C6B600571F2E /* GameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameObject.cpp; path = objects/GameObject.cpp; sourceTree = "<group>"; };
-		86EB2A771CD7C6B600571F2E /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameObject.h; path = objects/GameObject.h; sourceTree = "<group>"; };
->>>>>>> Stashed changes
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -212,14 +203,12 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< Updated upstream
-=======
-				86EB2A751CD7C5AC00571F2E /* objects */,
-				86EB2A731CD7C58C00571F2E /* scenes */,
-				86EB2A741CD7C59600571F2E /* exceptions */,
+				86EB2A6E1CD7A5EB00571F2E /* InitializationError.cpp */,
+				86EB2A6F1CD7A5EB00571F2E /* InitializationError.h */,
 				86EB2A6B1CD7A5DD00571F2E /* GameSettings.cpp */,
 				86EB2A6C1CD7A5DD00571F2E /* GameSettings.h */,
->>>>>>> Stashed changes
+				86EB2A681CD7A5CF00571F2E /* GameMainMenuScene.cpp */,
+				86EB2A691CD7A5CF00571F2E /* GameMainMenuScene.h */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
@@ -275,33 +264,6 @@
 			name = Icons;
 			path = ios;
 			sourceTree = SOURCE_ROOT;
-		};
-		86EB2A731CD7C58C00571F2E /* scenes */ = {
-			isa = PBXGroup;
-			children = (
-				86EB2A681CD7A5CF00571F2E /* GameMainMenuScene.cpp */,
-				86EB2A691CD7A5CF00571F2E /* GameMainMenuScene.h */,
-			);
-			name = scenes;
-			sourceTree = "<group>";
-		};
-		86EB2A741CD7C59600571F2E /* exceptions */ = {
-			isa = PBXGroup;
-			children = (
-				86EB2A6E1CD7A5EB00571F2E /* InitializationError.cpp */,
-				86EB2A6F1CD7A5EB00571F2E /* InitializationError.h */,
-			);
-			name = exceptions;
-			sourceTree = "<group>";
-		};
-		86EB2A751CD7C5AC00571F2E /* objects */ = {
-			isa = PBXGroup;
-			children = (
-				86EB2A761CD7C6B600571F2E /* GameObject.cpp */,
-				86EB2A771CD7C6B600571F2E /* GameObject.h */,
-			);
-			name = objects;
-			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -371,10 +333,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86EB2A6A1CD7A5CF00571F2E /* GameMainMenuScene.cpp in Sources */,
+				86EB2A6D1CD7A5DD00571F2E /* GameSettings.cpp in Sources */,
+				86EB2A701CD7A5EB00571F2E /* InitializationError.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
-				86EB2A781CD7C6B600571F2E /* GameObject.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
