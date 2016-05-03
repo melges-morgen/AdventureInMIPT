@@ -133,6 +133,7 @@ set(GAME_SRC
         Classes/GameSettings.cpp
         Classes/exceptions/InitializationError.cpp
         Classes/scenes/GameMainMenuScene.cpp
+        Classes/objects/GameObject.cpp
 )
 
 set(GAME_HEADERS
@@ -141,7 +142,9 @@ set(GAME_HEADERS
         Classes/HelloWorldScene.h
         Classes/GameSettings.h
         Classes/exceptions/InitializationError.h
-        Classes/scenes/GameMainMenuScene.h)
+        Classes/scenes/GameMainMenuScene.h
+        Classes/objects/GameObject.h
+)
 
 if(GAME_HEADERS)
   if ( WIN32 )
