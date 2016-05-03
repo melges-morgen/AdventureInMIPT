@@ -8,15 +8,18 @@
 #include "exceptions/InitializationError.h"
 #include "base/CCUserDefault.h"
 
-class GameSettings {
+class GameSettings
+{
 public:
     static GameSettings *getInstance();
 
-    inline bool isFullScreen() {
+    inline bool isFullScreen()
+    {
         return userDefault_->getBoolForKey("fullScreen");
     }
 
-    inline void setFullScreen(bool &fullScreen) {
+    inline void setFullScreen(bool fullScreen)
+    {
         userDefault_->setBoolForKey("fullScreen", fullScreen);
     }
 

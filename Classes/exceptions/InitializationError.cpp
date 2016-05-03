@@ -4,14 +4,17 @@
 
 #include "InitializationError.h"
 
-InitializationError::InitializationError(std::string &what) : what_(what) {
+InitializationError::InitializationError(std::string &what) : what_(what)
+{
 }
 
-const char *InitializationError::what() const noexcept {
+const char *InitializationError::what() const noexcept
+{
     return what_.c_str();
 }
 
-InitializationError::~InitializationError() {
+InitializationError::~InitializationError()
+{
 
 }
 

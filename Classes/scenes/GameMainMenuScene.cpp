@@ -24,7 +24,8 @@ GameMainMenuScene::GameMainMenuScene() :
         throw std::runtime_error("Can't get game director instance");
 }
 
-bool GameMainMenuScene::init() {
+bool GameMainMenuScene::init()
+{
     if(!Layer::init())
         return false;
 
@@ -33,7 +34,8 @@ bool GameMainMenuScene::init() {
     return true;
 }
 
-void GameMainMenuScene::switchToMainMenu() {
+void GameMainMenuScene::switchToMainMenu()
+{
     if(menu_ != nullptr)
         this->removeChild(menu_);
 
@@ -55,7 +57,8 @@ void GameMainMenuScene::switchToMainMenu() {
     this->addChild(menu_, 1);
 }
 
-void GameMainMenuScene::switchToSettingsMenu() {
+void GameMainMenuScene::switchToSettingsMenu()
+{
     if(menu_ != nullptr)
         this->removeChild(menu_);
 
@@ -70,6 +73,15 @@ void GameMainMenuScene::switchToSettingsMenu() {
         fullScreenItem->setSelectedIndex(1);
     else
         fullScreenItem->setSelectedIndex(0);
+    
+    fullScreenItem->setCallback([this, fullScreenItem, fullScreenItemOn] (Ref *pSender)
+    {
+        if(fullScreenItem->getSelectedItem() == fullScreenItemOn)
+            gameSettings_->setFullScreen(true);
+        else
+            gameSettings_->setFullScreen(false);
+            
+    });
 
     auto settingsItem = MenuItemFont::create("Назад", [&] (Ref *pSender) { switchToMainMenu(); });
     menuItems.pushBack(settingsItem);
@@ -81,7 +93,8 @@ void GameMainMenuScene::switchToSettingsMenu() {
     this->addChild(menu_, 1);
 }
 
-GameMainMenuScene::~GameMainMenuScene() {
+GameMainMenuScene::~GameMainMenuScene()
+{
 
 }
 
