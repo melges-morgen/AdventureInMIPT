@@ -1,5 +1,7 @@
+#include "scenes/GameMainMenuScene.h"
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
+#include "GameSettings.h"
 
 USING_NS_CC;
 
@@ -8,7 +10,8 @@ static cocos2d::Size smallResolutionSize = cocos2d::Size(480, 320);
 static cocos2d::Size mediumResolutionSize = cocos2d::Size(1024, 768);
 static cocos2d::Size largeResolutionSize = cocos2d::Size(2048, 1536);
 
-AppDelegate::AppDelegate() {
+AppDelegate::AppDelegate()
+{
 
 }
 
@@ -34,13 +37,20 @@ static int register_all_packages()
     return 0; //flag for packages manager
 }
 
-bool AppDelegate::applicationDidFinishLaunching() {
+bool AppDelegate::applicationDidFinishLaunching()
+{
     // initialize director
     auto director = Director::getInstance();
+    auto settings = GameSettings::getInstance();
     auto glview = director->getOpenGLView();
-    if(!glview) {
+    if(!glview)
+    {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX)
-        glview = GLViewImpl::createWithRect("AdventureOnMIPT", Rect(0, 0, designResolutionSize.width, designResolutionSize.height));
+        if(settings->isFullScreen())
+            glview = GLViewImpl::createWithFullScreen("AdventureOnMIPT");
+        else
+            glview = GLViewImpl::createWithRect("AdventureOnMIPT",
+                                                Rect(0, 0, mediumResolutionSize.width, mediumResolutionSize.height));
 #else
         glview = GLViewImpl::create("AdventureOnMIPT");
 #endif
@@ -75,7 +85,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     register_all_packages();
 
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+    auto scene = GameMainMenuScene::createScene();
 
     // run
     director->runWithScene(scene);
@@ -84,7 +94,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
 }
 
 // This function will be called when the app is inactive. When comes a phone call,it's be invoked too
-void AppDelegate::applicationDidEnterBackground() {
+void AppDelegate::applicationDidEnterBackground()
+{
     Director::getInstance()->stopAnimation();
 
     // if you use SimpleAudioEngine, it must be pause
@@ -92,7 +103,8 @@ void AppDelegate::applicationDidEnterBackground() {
 }
 
 // this function will be called when the app is active again
-void AppDelegate::applicationWillEnterForeground() {
+void AppDelegate::applicationWillEnterForeground()
+{
     Director::getInstance()->startAnimation();
 
     // if you use SimpleAudioEngine, it must resume here
