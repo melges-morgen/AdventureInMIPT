@@ -10,6 +10,7 @@
 #define GameObject_h
 
 #include <utility>
+#include <set>
 
 typedef std::pair<int, int> Position;
 
