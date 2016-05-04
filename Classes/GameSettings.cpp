@@ -6,14 +6,16 @@
 
 GameSettings* GameSettings::instance_ = 0;
 
-GameSettings::GameSettings() {
+GameSettings::GameSettings()
+{
     userDefault_ = cocos2d::UserDefault::getInstance();
     if(userDefault_ != nullptr)
         instance_ = this;
 }
 
 
-GameSettings *GameSettings::getInstance() {
+GameSettings *GameSettings::getInstance()
+{
     if(instance_ == nullptr)
         instance_ = new GameSettings();
 
