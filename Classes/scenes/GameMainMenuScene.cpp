@@ -2,7 +2,9 @@
 // Created by melges on 30.04.16.
 //
 
+#include <2d/CCTransition.h>
 #include "GameMainMenuScene.h"
+#include "ExperimentMapScene.h"
 
 USING_NS_CC;
 
@@ -41,7 +43,10 @@ void GameMainMenuScene::switchToMainMenu()
 
     Vector<MenuItem*> menuItems;
     auto continueGameItem = MenuItemFont::create("Продолжить", [&] (Ref *pSender) {});
-    auto newGameItem = MenuItemFont::create("Новая игра", [&] (Ref *pSender) {});
+    auto newGameItem = MenuItemFont::create("Новая игра", [&] (Ref *pSender)
+    {
+        director_->replaceScene(TransitionFade::create(0.5, ExperimentMapScene::createScene()));
+    });
     auto settingsItem = MenuItemFont::create("Настройки", [&] (Ref *pSender) { switchToSettingsMenu(); });
     auto exitGameItem = MenuItemFont::create("Выход", [&] (Ref *pSender) { director_->end(); });
     menuItems.pushBack(continueGameItem);
@@ -76,10 +81,7 @@ void GameMainMenuScene::switchToSettingsMenu()
     
     fullScreenItem->setCallback([this, fullScreenItem, fullScreenItemOn] (Ref *pSender)
     {
-        if(fullScreenItem->getSelectedItem() == fullScreenItemOn)
-            gameSettings_->setFullScreen(true);
-        else
-            gameSettings_->setFullScreen(false);
+        gameSettings_->setFullScreen(fullScreenItem->getSelectedItem() == fullScreenItemOn);
             
     });
 

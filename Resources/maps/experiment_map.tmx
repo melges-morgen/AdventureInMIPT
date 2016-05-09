@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="left-up" width="26" height="18" tilewidth="32" tileheight="32" nextobjectid="11">
+ <tileset firstgid="1" name="lava" tilewidth="32" tileheight="32" tilecount="18" columns="3">
+  <image source="../tiles/base_assets/tiles/lava.png" trans="ff00ff" width="96" height="192"/>
+ </tileset>
+ <tileset firstgid="19" name="water" tilewidth="32" tileheight="32" tilecount="18" columns="3">
+  <image source="../tiles/base_assets/tiles/water.png" trans="ff00ff" width="96" height="192"/>
+ </tileset>
+ <tileset firstgid="37" name="grass" tilewidth="32" tileheight="32" tilecount="18" columns="3">
+  <image source="../tiles/base_assets/tiles/grass.png" trans="ff00ff" width="96" height="192"/>
+ </tileset>
+ <layer name="water" width="26" height="18">
+  <data encoding="base64" compression="zlib">
+   eJyTZWBgkB3Fo3gUj+JRPIpHMUUYAFNWNQU=
+  </data>
+ </layer>
+ <layer name="ground" width="26" height="18">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFQxXo48Cj9ozaQwt7RsEoGAX4AQDuqwad
+  </data>
+ </layer>
+ <layer name="edges" width="26" height="18">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFQxWIALECGhalgT1yWMRkaGyPMJ3sgQFa2yNGQ3vEgVgKDUvQwJ5RMApGAX4AAIryAlI=
+  </data>
+ </layer>
+ <objectgroup name="InstrumentalObjects">
+  <object id="9" name="SpawnPoint" x="256" y="161" width="32" height="30.5"/>
+ </objectgroup>
+</map>

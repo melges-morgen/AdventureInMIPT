@@ -144,7 +144,7 @@ set(GAME_HEADERS
         Classes/exceptions/InitializationError.h
         Classes/scenes/GameMainMenuScene.h
         Classes/objects/GameObject.h
-)
+        Classes/scenes/ExperimentMapScene.cpp Classes/scenes/ExperimentMapScene.h Classes/utils.h)
 
 if(GAME_HEADERS)
   if ( WIN32 )
